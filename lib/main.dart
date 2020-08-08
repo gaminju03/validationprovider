@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => SignupValidation(),
           child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Login Provider',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

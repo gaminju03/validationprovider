@@ -21,30 +21,25 @@ class SignupValidation with ChangeNotifier {
 
   //Setters
   void changeFirstName(String value){
-    if (value.length >= 3){
+    if (value.length >= 4){
       _firstName=ValidationItem(value,null);
     } else {
-      _firstName=ValidationItem(null, "Must be at least 3 characters");
+      _firstName=ValidationItem(null, "Debe tener al menos 4 caracteres");
     }
     notifyListeners();
   }
 
     void changeLastName(String value){
-    if (value.length >= 3){
+    if (value.length >= 4){
       _lastName=ValidationItem(value,null);
     } else {
-      _lastName=ValidationItem(null, "Must be at least 3 characters");
+      _lastName=ValidationItem(null, "Debe tener al menos 4 caracteres");
     }
     notifyListeners();
   }
 
   void submitData(){
-    //print("Nombre: ${firstName.value}, Apellido: ${lastName.value}");
-            Text(
-            firstName.value,
-            style: TextStyle(fontSize: 30.0,),
-        );
-
+    print("Bienvenido usuario Nombre: ${firstName.value}, Apellido: ${lastName.value}");
   }
 
 
